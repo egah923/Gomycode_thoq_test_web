@@ -1,0 +1,11 @@
+const MoreIcon = () => {
+  return (
+    <svg width="7" height="20" viewBox="0 0 7 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="3.5" cy="25.5" r="3.5" fill="black" />
+      <circle cx="3.5" cy="14.5" r="3.5" fill="black" />
+      <circle cx="3.5" cy="3.5" r="3.5" fill="black" />
+    </svg>
+  )
+}
+
+export default MoreIcon

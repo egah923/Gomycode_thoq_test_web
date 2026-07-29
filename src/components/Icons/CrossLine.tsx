@@ -1,0 +1,13 @@
+const CrossLine = () => {
+    return <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_1713_30614)">
+            <path d="M9.00005 7.93955L12.7126 4.22705L13.7731 5.28755L10.0606 9.00005L13.7731 12.7126L12.7126 13.7731L9.00005 10.0606L5.28755 13.7731L4.22705 12.7126L7.93955 9.00005L4.22705 5.28755L5.28755 4.22705L9.00005 7.93955Z" fill="black" />
+        </g>
+        <defs>
+            <clipPath id="clip0_1713_30614">
+                <rect width="18" height="18" fill="white" />
+            </clipPath>
+        </defs>
+    </svg>
+}
+export default CrossLine

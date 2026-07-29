@@ -1,0 +1,99 @@
+@import "variables";
+
+
+//*********************************************** Text Colors *********************************************** 
+
+.bg-primary {
+  background-color: $color-primary !important;
+}
+
+//*********************************************** Text Colors *********************************************** 
+
+.text-primary {
+  color: $color-primary !important;
+}
+
+.text-dark {
+  color: $color-dark-text !important;
+}
+
+
+
+.text-secondary {
+  color: $color-secondary-text !important;
+}
+
+
+.text-light {
+  color: $color-light-text !important;
+}
+
+.text-white-75 {
+  color: rgba($color-white, 0.75) !important;
+}
+
+.text-white-50 {
+  color: rgba($color-white, 0.5) !important;
+}
+
+
+//*********************************************** Border *********************************************** 
+.border-secondary {
+  border-color: $color-secondary-text;
+}
+
+.border-black {
+  border-color: $color-secondary-text !important;
+}
+
+//*********************************************** Box Shadows *********************************************** 
+
+.text-shadow {
+  text-shadow: 0px 3px 1px rgba($color-black, 0.4);
+}
+
+.text-shadow-sm {
+  text-shadow: 0px 4px 2px rgba($color-black, 0.25);
+}
+
+.text-shadow-md {
+  text-shadow: 0px 1px 1px rgba($color-black, 0.30) !important;
+}
+
+//*********************************************** Shadows Colors *********************************************** 
+.shadow-sm {
+  box-shadow: 0px 1px 1px 0px rgba($color-black, 0.15);
+}
+
+
+.shadow-md {
+  box-shadow: 0px 1px 1px 0px rgba($color-black, 0.30) !important;
+}
+
+.shadow {
+  box-shadow: 0px 4px 4px 0px rgba($color-black, 0.25) !important;
+}
+
+
+
+
+//*********************************************** Utility Classes *********************************************** 
+
+
+.h-unset {
+  height: unset !important;
+}
+
+
+
+.line-clamp {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+  &.line-2 {
+    -webkit-line-clamp: 2;
+  }
+}

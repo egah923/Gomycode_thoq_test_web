@@ -1,0 +1,382 @@
+@import "variables";
+
+
+
+// ************************* Form Components *************************
+
+
+.country-code-field-selector {
+    height: 47px !important;
+}
+
+.ant-select-selector,
+.ant-input-outlined,
+.ant-select-selector,
+.ant-picker-outlined,
+.country-code-field-selector,
+.ant-input-number-outlined {
+    border: 0px !important;
+    border-bottom: 1px solid rgb($color-white, 50%) !important;
+    border-radius: 0px !important;
+    color: rgb($color-white, 50%) !important;
+    font-weight: 400;
+    font-size: 16px !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.country-field {
+    .ant-form-item-explain-error {
+        margin-left: -34px !important
+    }
+}
+
+.form-select-suffix-icon {
+    @extend .ant-select-selector;
+    height: 47px;
+}
+
+.form-select-suffix-icon {
+    padding-left: 11px;
+}
+
+.form-select-suffix-icon svg {
+    transform: translateY(50%);
+}
+
+.ant-input-affix-wrapper .ant-input-prefix {
+    margin-inline-end: 17px !important;
+}
+
+
+.light_theme_form {
+
+    .ant-picker-input::placeholder,
+    ::placeholder,
+    .ant-select-selection-item,
+    .ant-select-selection-placeholder,
+    .country-code-field-selection-placeholder {
+        color: rgba($color-black, 0.6) !important;
+        font-size: 16px !important;
+    }
+
+    .ant-picker-outlined,
+    .ant-input-outlined,
+    .ant-select-selector,
+    .ant-select-selection-item,
+    .ant-input-number-outlined,
+    .country-code-field-selector {
+        color: $color-black !important;
+        border-color: $color-black !important;
+        background-color: transparent !important;
+        padding-left: 0 !important;
+        font-size: 16px !important;
+    }
+
+}
+
+
+::placeholder,
+.ant-select-selection-placeholder {
+    @extend .text-white-50;
+}
+
+
+.comment-form {
+    ::placeholder {
+        color: $color-secondary-text !important;
+    }
+}
+
+textarea,
+textarea.ant-input.ant-input-outlined {
+    padding-inline: 11px !important;
+    resize: none !important;
+    border: 1px solid $color-black !important;
+}
+
+
+
+.ant-input-outlined:focus {
+    box-shadow: none !important
+}
+
+
+.ant-input-affix-wrapper .anticon.ant-input-password-icon {
+    color: rgba($color-white, 0.5) !important;
+}
+
+.dark_password_eye {
+    .ant-input-affix-wrapper .anticon.ant-input-password-icon {
+        color: rgba($color-black, 0.8) !important;
+    }
+}
+
+.ant-input-outlined .anticon.ant-input-password-icon svg {
+    font-size: 24px;
+}
+
+
+.light_theme_form {
+
+    .ant-input-outlined.ant-input-status-error:not(.ant-input-disabled),
+    .ant-input-number-outlined.ant-input-number-status-error:not(.ant-input-number-disabled),
+    .ant-select-outlined.ant-select-status-error:not(.ant-select-customize-input) .ant-select-selector,
+    .country-code-field-outlined.country-code-field-status-error:not(.country-code-field-customize-input) .country-code-field-selector {
+        border-bottom: 1px solid #d85b3c !important;
+        background-color: rgba(#d85b3c, 0.15) !important;
+    }
+
+}
+
+// ************************* Buttons Components *************************
+
+
+.btn-icon {
+    padding: 0 !important;
+    height: unset !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.btn-text {
+    padding: 0 !important;
+    height: unset !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    text-decoration: underline !important;
+
+    span {
+        text-decoration: underline !important;
+    }
+}
+
+
+
+
+// ******************************** Modal ********************************
+
+.ant-modal-root .ant-modal-mask {
+    background-color: $color-white !important;
+}
+
+.ant-modal .ant-modal-content {
+    box-shadow: 0px 4px 4px 0px rgba($color-black, 0.40) !important;
+    background-color: rgba($color-primary, 0.60) !important;
+    padding: 16px !important;
+}
+
+.ant-modal-header {
+    background-color: rgba($color-black, 1.0) !important;
+    text-align: center !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+
+}
+
+.ant-modal .ant-modal-title {
+    color: $color-primary !important;
+    font-size: 24px !important;
+
+
+    @media all and (max-width:767px) {
+        font-size: 18px !important;
+
+    }
+
+}
+
+.ant-modal-body {
+    padding-block: 16px 24px !important;
+}
+
+
+// ******************************** Error Message ********************************
+.error-message {
+    @extend .ant-modal-header;
+    background-color: #FFD0C6 !important;
+    border: 1px solid $color-danger !important;
+    color: #E95050 !important;
+}
+
+// ******************************** Checkboxes ********************************
+
+.ant-checkbox-wrapper {
+    align-items: center;
+}
+
+.ant-checkbox .ant-checkbox-inner {
+    width: 28px;
+    height: 28px;
+    background-color: $color-light-text;
+    border: 6px solid $color-secondary-text;
+    border-radius: 0;
+
+    &::hover {
+        all: inherit !important;
+    }
+}
+
+.ant-checkbox-checked .ant-checkbox-inner:after {
+    display: none;
+}
+
+.ant-checkbox.ant-checkbox-checked .ant-checkbox-inner,
+.ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover .ant-checkbox-checked:not(.ant-checkbox-disabled) .ant-checkbox-inne {
+    background-color: $color-primary !important;
+    border: 4px solid $color-secondary-text !important;
+}
+
+.ant-checkbox-wrapper span {
+    font-size: 16px;
+}
+
+// ******************************** Upload ********************************
+
+.ant-upload-wrapper.ant-upload-picture-card-wrapper .ant-upload.ant-upload-select,
+.ant-upload-wrapper.ant-upload-picture-circle-wrapper .ant-upload.ant-upload-select,
+.ant-upload-wrapper .ant-upload-list.ant-upload-list-picture-card .ant-upload-list-item {
+    background-color: transparent !important;
+    border: 1px solid $color-black !important;
+    border-radius: 0px !important;
+}
+
+
+
+.upload-contest-act-list-item-container {
+    display: none !important;
+
+}
+
+// ******************************** Tabs ********************************
+
+.tab-badge {
+    width: 24px;
+    height: 24px;
+    background-color: $color-bg-light-body;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.tabs-wrapper {
+    .ant-tabs .ant-tabs-tab-btn {
+        font-weight: 500 !important;
+    }
+
+    .ant-tabs-top>.ant-tabs-nav .ant-tabs-ink-bar,
+    .ant-tabs-top>div>.ant-tabs-nav .ant-tabs-ink-bar {
+        bottom: 2px !important;
+    }
+
+    .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: $color-black !important;
+        font-weight: 600 !important;
+    }
+
+    .ant-tabs .ant-tabs-tab-btn:active {
+        color: $color-secondary-text !important;
+    }
+
+    .ant-tabs .ant-tabs-ink-bar {
+        background: $color-black !important;
+        height: 5px !important;
+        margin-top: -2px !important;
+    }
+}
+
+.ant-tabs .ant-tabs-tab:hover {
+    color: $color-light-text !important;
+}
+
+.tabs-without-border {
+    .ant-tabs-top>.ant-tabs-nav::before {
+        border-bottom: 0 !important;
+    }
+
+    .ant-tabs-nav-wrap {
+        display: block !important;
+    }
+
+    .ant-tabs .ant-tabs-ink-bar {
+        height: 0px !important;
+    }
+
+    .tabs-wrapper .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        font-weight: 700;
+    }
+}
+
+
+// @media all and (max-width:575px) {
+
+//     .ant-tabs>.ant-tabs-nav .ant-tabs-nav-wrap,
+//     .ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-wrap {
+//         overflow-x: scroll !important;
+//     }
+// }
+
+.ant-tabs .ant-tabs-tab .ant-tabs-tab-btn {
+    white-space: nowrap !important;
+}
+
+
+// ******************************** Table ********************************
+
+.table> :not(caption)>*>* {
+    background-color: transparent;
+    border-color: $color-black;
+}
+
+.table th {
+    border: 0;
+    background-color: #D9D9D9 !important;
+    padding: 16px;
+    border-bottom: 1px solid $color-secondary-text !important;
+    white-space: nowrap !important;
+}
+
+
+.table tr td {
+    white-space: nowrap !important;
+}
+
+
+.table tr:last-child td {
+    border: 0;
+    padding-bottom: 0 !important;
+}
+
+
+.rewards-table.table tr td {
+    padding: 16px !important;
+}
+
+
+// ******************* Upload Profile *******************
+
+.upload-profile-image {
+    &:hover {
+        & button {
+            visibility: visible !important;
+        }
+    }
+
+    button {
+        visibility: hidden !important;
+        background-color: rgba($color-black, 0.3) !important;
+    }
+}
+
+// ******************* Upload Profile *******************
+.video-card__image,
+.contest-card__image {
+    height: 250px;
+    background: #e7e7e7;
+}
