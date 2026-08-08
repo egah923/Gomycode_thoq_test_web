@@ -10,26 +10,47 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
+      # 3. Install dependencies
       - name: Install dependencies
         run: npm ci
 
+      # 4. Build the Next.js application
       - name: Build Next.js
         run: npm run build
 
-      - name: Install Vercel CLI
-        run: npm install --global vercel
-
-      - name: Deploy to Vercel
-        run: vercel deploy --prod --token="${{ secrets.VERCEL_TOKEN }}"
+      # 5. Test whether GitHub can access the Vercel token
+      - name: Check Vercel Token
         env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "❌ VERCEL_TOKEN is EMPTY"
+            exit 1
+          else
+            echo "✅ VERCEL_TOKEN exists"
+            echo "Token length: ${#VERCEL_TOKEN}"
+          fi
+
+      # 6. Install Vercel CLI
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      # 7. Deploy to Vercel
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          vercel deploy --prod --token="$VERCEL_TOKEN"
